@@ -27,7 +27,7 @@ class BluetoothDeviceAdapter(private val listener: ItemClickListener) :
 
     class BluetoothDiffCallback : DiffUtil.ItemCallback<BluetoothDevice>() {
         override fun areItemsTheSame(oldItem: BluetoothDevice, newItem: BluetoothDevice) =
-            oldItem.uuids.first() == newItem.uuids.first()
+            oldItem.address == newItem.address
 
         override fun areContentsTheSame(
             oldItem: BluetoothDevice,

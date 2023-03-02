@@ -5,6 +5,7 @@ import androidx.room.Room
 import com.kaushalvasava.org.apps.bluetoothapp.db.BluetoothDatabase
 import com.kaushalvasava.org.apps.bluetoothapp.repo.BluetoothRepository
 import com.kaushalvasava.org.apps.bluetoothapp.repo.BluetoothRepositoryImpl
+import com.kaushalvasava.org.apps.bluetoothapp.util.AppConstant.DATABASE_NAME
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -14,8 +15,6 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
-
-    private const val DATABASE_NAME = "BluetoothDB"
 
     @Provides
     @Singleton

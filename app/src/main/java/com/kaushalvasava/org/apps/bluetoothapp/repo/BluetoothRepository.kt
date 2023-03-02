@@ -5,11 +5,12 @@ import kotlinx.coroutines.flow.Flow
 
 interface BluetoothRepository {
 
-    suspend fun insertTodo(bluetooth: Bluetooth)
+    suspend fun insertBluetooth(bluetooth: Bluetooth)
 
-    suspend fun deleteTodo(bluetooth: Bluetooth)
+    suspend fun deleteBluetooth(bluetooth: Bluetooth)
 
-    suspend fun updateTodo(bluetooth: Bluetooth)
+    suspend fun updateBluetooth(bluetooth: Bluetooth)
 
     fun getAllRecords(): Flow<List<Bluetooth>>
+    suspend fun deleteAllRecords()
 }

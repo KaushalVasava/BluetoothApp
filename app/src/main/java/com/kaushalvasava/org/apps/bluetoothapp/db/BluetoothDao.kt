@@ -15,6 +15,8 @@ interface BluetoothDao {
 
     @Delete
     suspend fun delete(bluetooth: Bluetooth)
+    @Query("DELETE FROM bluetooth_table")
+    suspend fun deleteAll()
 
     @Update(onConflict = OnConflictStrategy.REPLACE)
     suspend fun update(note: Bluetooth)

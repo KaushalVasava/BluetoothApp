@@ -8,20 +8,24 @@ class BluetoothRepositoryImpl(
     private val dao: BluetoothDao,
 ) : BluetoothRepository {
 
-    override suspend fun insertTodo(bluetooth: Bluetooth) {
+    override suspend fun insertBluetooth(bluetooth: Bluetooth) {
         dao.insert(bluetooth)
     }
 
-    override suspend fun deleteTodo(bluetooth: Bluetooth) {
+    override suspend fun deleteBluetooth(bluetooth: Bluetooth) {
         dao.delete(bluetooth)
     }
 
-    override suspend fun updateTodo(bluetooth: Bluetooth) {
+    override suspend fun updateBluetooth(bluetooth: Bluetooth) {
         dao.update(bluetooth)
     }
 
     override fun getAllRecords(
-     ): Flow<List<Bluetooth>> {
+    ): Flow<List<Bluetooth>> {
         return dao.getAllRecords()
+    }
+
+    override suspend fun deleteAllRecords() {
+        dao.deleteAll()
     }
 }

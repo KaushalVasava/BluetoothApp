@@ -9,11 +9,13 @@ class BluetoothDeviceViewHolder(
     private val binding: BluetoothItemBinding,
     private val listener: ItemClickListener,
 ) : RecyclerView.ViewHolder(binding.root) {
-
     fun bind(item: BluetoothDevice) {
-        binding.tvName.text = item.name?:""
+        binding.tvName.text = item.name ?: ""
         binding.root.setOnClickListener {
-            listener.onItemClicked(item)
+            val position = adapterPosition
+            if (position != RecyclerView.NO_POSITION) {
+                listener.onItemClicked(item, position)
+            }
         }
     }
 }

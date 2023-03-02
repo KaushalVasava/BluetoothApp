@@ -36,6 +36,9 @@ class HistoryFragment : Fragment(R.layout.fragment_history) {
                 bluetoothHistoryAdapter.submitList(it)
             }
         }
+        binding.btnClearHistory.setOnClickListener {
+            viewModel.deleteAllRecords()
+        }
     }
 
     override fun onDestroyView() {

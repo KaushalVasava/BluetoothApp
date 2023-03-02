@@ -1,6 +1,5 @@
 package com.kaushalvasava.org.apps.bluetoothapp.ui.viewmodel
 
-import android.util.Log
 import androidx.lifecycle.*
 import com.kaushalvasava.org.apps.bluetoothapp.model.Bluetooth
 import com.kaushalvasava.org.apps.bluetoothapp.repo.BluetoothRepository
@@ -28,14 +27,18 @@ class BluetoothViewModel @Inject constructor(
     }
 
     fun insert(bluetooth: Bluetooth) = viewModelScope.launch(Dispatchers.IO) {
-        repository.insertTodo(bluetooth)
+        repository.insertBluetooth(bluetooth)
     }
 
     fun update(bluetooth: Bluetooth) = viewModelScope.launch(Dispatchers.IO) {
-        repository.updateTodo(bluetooth)
+        repository.updateBluetooth(bluetooth)
     }
 
     fun delete(bluetooth: Bluetooth) = viewModelScope.launch(Dispatchers.IO) {
-        repository.deleteTodo(bluetooth)
+        repository.deleteBluetooth(bluetooth)
+    }
+
+    fun deleteAllRecords() = viewModelScope.launch(Dispatchers.IO) {
+        repository.deleteAllRecords()
     }
 }

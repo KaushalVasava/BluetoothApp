@@ -7,6 +7,6 @@ import androidx.room.PrimaryKey
 data class Bluetooth(
     @PrimaryKey val id: String,
     val name: String,
-    val duration: Int,
+    val duration: Long,
     val isConnected: Boolean = false
 )

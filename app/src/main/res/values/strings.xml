@@ -10,4 +10,8 @@
     <string name="please_grant_permission">Please allow this permission</string>
     <string name="grant">Grant</string>
     <string name="history">History</string>
+    <string name="minutes">%s minutes</string>
+    <string name="bluetooth_disconnect">Bluetooth disconnected</string>
+    <string name="battery_low_info">Your bluetooth device battery is low</string>
+    <string name="clear_history">clear history</string>
 </resources>
